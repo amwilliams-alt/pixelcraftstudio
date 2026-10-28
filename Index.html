@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pixelcraft Studio | Web design &amp; UX in Toronto</title>
+<meta name="description" content="Pixelcraft Studio crafts websites and user experiences on Squarespace, Wix, Shopify, WordPress and more.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap">
+<style>
+:root{--bg:#FDFDF5;--ink:#20211F;--burg:#502B33;--lime:#B5BF50;--ln:rgba(32,33,31,.16);--sf:#F5F5DC;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:Poppins,system-ui,sans-serif;font-weight:600;margin:0;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{height:36px;width:auto;display:block}
+nav{display:flex;gap:4px}
+nav a{text-decoration:none;font:500 14px Poppins,sans-serif;padding:8px 14px;border-radius:99px}
+nav a:hover{background:var(--sf)}
+nav a.cta-n{background:var(--burg);color:var(--bg)}
+nav a.cta-n:hover{background:var(--ink)}
+.btn{display:inline-block;padding:14px 28px;border-radius:99px;font:500 15px Poppins,sans-serif;text-decoration:none;background:var(--burg);color:var(--bg);border:2px solid var(--burg)}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.alt{background:transparent;color:var(--burg)}
+.btn.alt:hover{background:var(--burg);color:var(--bg);border-color:var(--burg)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero{position:relative;overflow:hidden;min-height:calc(100vh - 68px);display:flex;align-items:center;border-bottom:1px solid var(--ln)}
+#cv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;padding-top:64px;padding-bottom:64px;pointer-events:none}
+.hero .wrap>*{pointer-events:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 14px Poppins,sans-serif;margin-bottom:22px}
+.eyebrow::before{content:"";width:12px;height:12px;background:var(--lime)}
+.hero h1{font-size:clamp(40px,8vw,104px);letter-spacing:-.03em;max-width:11em}
+.hero h1 em{font-style:normal;color:var(--burg)}
+.hero .sub{max-width:34em;font-size:19px;margin:28px 0 34px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chips span{font:500 14px Poppins,sans-serif;padding:7px 16px;border-radius:99px;background:var(--lime);color:var(--ink)}
+.chips b{font:500 14px Inter,sans-serif;align-self:center;margin-right:4px}
+section{padding:84px 0;border-bottom:1px solid var(--ln)}
+h2{font-size:clamp(30px,5vw,52px);margin-bottom:14px;letter-spacing:-.02em}
+.lead{max-width:36em;margin:0 0 36px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;padding:26px 10px;border-top:1px solid var(--ln);text-decoration:none;transition:background .2s,padding .2s}
+.row:last-child{border-bottom:1px solid var(--ln)}
+.row:hover{background:var(--sf);padding-left:24px}
+.row .n{font:600 15px Poppins,sans-serif;color:var(--burg)}
+.row h3{font-size:clamp(24px,4vw,38px)}
+.row small{display:block;font-size:14.5px;margin-top:6px;max-width:42em}
+.row .t{font:500 12px Poppins,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--burg);text-align:right}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.sv{background:var(--sf);border:1px solid var(--ln);border-top:4px solid var(--lime);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.sv h3{font-size:22px;color:var(--burg)}.sv p{margin:0;font-size:15.5px}.sv ul{margin:4px 0 0;padding-left:18px;font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+td,th{text-align:left;padding:14px 8px;border-top:1px solid var(--ln)}
+th{font:500 12px Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+td a{color:var(--burg);font-weight:500;text-decoration:none}
+.end{text-align:center;padding:110px 0;background:var(--burg);color:var(--bg);border:0}
+.end h2{font-size:clamp(34px,6.5vw,80px);max-width:12em;margin:0 auto}
+.end .btns{justify-content:center;margin-top:32px}
+.end .btn{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.end .btn:hover{background:var(--bg);border-color:var(--bg)}
+.end .btn.alt{background:transparent;color:var(--bg);border-color:var(--bg)}
+.end .btn.alt:hover{background:var(--bg);color:var(--burg)}
+footer{padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+footer svg{height:30px;width:30px}
+@media (max-width:640px){.row{grid-template-columns:36px 1fr}.row .t{display:none}nav a:not(.cta-n){display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="lg"><path d="M763.669 76V10.72H786.613C790.325 10.72 793.717 11.552 796.789 13.216C799.925 14.88 802.421 17.216 804.277 20.224C806.197 23.232 807.157 26.752 807.157 30.784C807.157 34.816 806.229 38.368 804.373 41.44C802.517 44.448 800.021 46.816 796.885 48.544C793.813 50.208 790.389 51.04 786.613 51.04H772.981V76H763.669ZM772.981 42.976H786.229C788.405 42.976 790.357 42.464 792.085 41.44C793.877 40.352 795.285 38.88 796.309 37.024C797.333 35.168 797.845 33.056 797.845 30.688C797.845 28.256 797.333 26.176 796.309 24.448C795.349 22.656 794.005 21.248 792.277 20.224C790.549 19.2 788.533 18.688 786.229 18.688H772.981V42.976Z" fill="#20211F"/><path d="M816.656 76V33.76H825.872V76H816.656ZM821.264 26.848C819.664 26.848 818.32 26.304 817.232 25.216C816.144 24.064 815.6 22.72 815.6 21.184C815.6 19.584 816.144 18.24 817.232 17.152C818.32 16.064 819.664 15.52 821.264 15.52C822.8 15.52 824.112 16.064 825.2 17.152C826.352 18.24 826.928 19.584 826.928 21.184C826.928 22.72 826.352 24.064 825.2 25.216C824.112 26.304 822.8 26.848 821.264 26.848Z" fill="#20211F"/><path d="M834.894 76L850.446 54.784L835.278 33.76H846.606L856.398 48.928L866.19 33.76H877.518L862.35 54.784L877.902 76H866.382L856.398 60.736L846.414 76H834.894Z" fill="#20211F"/><path d="M904.684 76.768C900.204 76.768 896.172 75.872 892.588 74.08C889.068 72.224 886.252 69.664 884.14 66.4C882.028 63.072 880.972 59.2 880.972 54.784C880.972 50.56 881.996 46.784 884.044 43.456C886.092 40.128 888.844 37.504 892.3 35.584C895.756 33.6 899.628 32.608 903.916 32.608C908.012 32.608 911.756 33.6 915.148 35.584C918.54 37.504 921.26 40.096 923.308 43.36C925.42 46.624 926.476 50.336 926.476 54.496V57.184H887.98V50.272H917.164C916.652 47.456 915.18 45.088 912.748 43.168C910.316 41.184 907.404 40.192 904.012 40.192C901.26 40.192 898.86 40.832 896.812 42.112C894.828 43.328 893.292 45.024 892.204 47.2C891.116 49.312 890.572 51.744 890.572 54.496C890.572 57.44 891.18 60 892.396 62.176C893.676 64.352 895.308 66.048 897.292 67.264C899.34 68.416 901.516 68.992 903.82 68.992C905.804 68.992 907.628 68.768 909.292 68.32C911.02 67.808 912.556 67.136 913.9 66.304C915.308 65.472 916.492 64.448 917.452 63.232L923.596 68.416C922.252 70.08 920.556 71.552 918.508 72.832C916.46 74.048 914.252 75.008 911.884 75.712C909.516 76.416 907.116 76.768 904.684 76.768Z" fill="#20211F"/><path d="M936.919 76V3.99999H946.231V76H936.919Z" fill="#20211F"/><path d="M978.516 76.96C975.572 76.96 972.788 76.416 970.164 75.328C967.54 74.176 965.204 72.64 963.156 70.72C961.172 68.736 959.572 66.4 958.356 63.712C957.204 61.024 956.628 58.08 956.628 54.88C956.628 50.848 957.588 47.168 959.508 43.84C961.492 40.512 964.148 37.856 967.476 35.872C970.868 33.824 974.676 32.8 978.9 32.8C982.548 32.8 985.844 33.504 988.788 34.912C991.796 36.32 994.324 38.272 996.372 40.768C998.42 43.264 999.764 46.176 1000.4 49.504H990.804C990.036 47.008 988.564 45.024 986.388 43.552C984.276 42.016 981.972 41.248 979.476 41.248C976.916 41.248 974.644 41.856 972.66 43.072C970.74 44.288 969.204 45.952 968.052 48.064C966.964 50.112 966.42 52.384 966.42 54.88C966.42 57.248 966.932 59.488 967.956 61.6C968.98 63.712 970.42 65.408 972.276 66.688C974.196 67.968 976.468 68.608 979.092 68.608C981.588 68.608 983.86 68 985.908 66.784C987.956 65.504 989.428 63.744 990.324 61.504H1000.12C999.22 64.64 997.716 67.392 995.604 69.76C993.556 72.064 991.06 73.856 988.116 75.136C985.236 76.352 982.036 76.96 978.516 76.96Z" fill="#20211F"/><path d="M1010.41 76V33.76H1019.63V40.96C1020.46 39.04 1021.42 37.504 1022.51 36.352C1023.66 35.136 1024.94 34.24 1026.35 33.664C1027.76 33.088 1029.26 32.8 1030.86 32.8C1031.56 32.8 1032.3 32.896 1033.07 33.088C1033.84 33.216 1034.51 33.44 1035.08 33.76V43.936C1034.38 43.168 1033.55 42.624 1032.59 42.304C1031.69 41.92 1030.76 41.728 1029.8 41.728C1027.82 41.728 1026.06 42.4 1024.52 43.744C1022.99 45.024 1021.77 46.656 1020.88 48.64C1020.04 50.624 1019.63 52.704 1019.63 54.88V76H1010.41Z" fill="#20211F"/><path d="M1062.5 76.96C1058.53 76.96 1054.98 75.936 1051.84 73.888C1048.7 71.776 1046.24 69.056 1044.45 65.728C1042.72 62.336 1041.86 58.72 1041.86 54.88C1041.86 50.976 1042.72 47.36 1044.45 44.032C1046.24 40.704 1048.7 38.016 1051.84 35.968C1054.98 33.856 1058.53 32.8 1062.5 32.8C1065.7 32.8 1068.61 33.44 1071.23 34.72C1073.86 36 1076.1 37.856 1077.95 40.288V33.76H1087.26V76H1077.95V69.472C1076.86 71.008 1075.52 72.352 1073.92 73.504C1072.32 74.656 1070.56 75.52 1068.64 76.096C1066.72 76.672 1064.67 76.96 1062.5 76.96ZM1064.7 68.608C1067.26 68.608 1069.54 67.968 1071.52 66.688C1073.5 65.408 1075.07 63.744 1076.22 61.696C1077.38 59.584 1077.95 57.312 1077.95 54.88C1077.95 52.448 1077.38 50.208 1076.22 48.16C1075.07 46.048 1073.5 44.352 1071.52 43.072C1069.54 41.792 1067.26 41.152 1064.7 41.152C1062.14 41.152 1059.87 41.792 1057.89 43.072C1055.9 44.352 1054.34 46.048 1053.18 48.16C1052.03 50.208 1051.46 52.448 1051.46 54.88C1051.46 57.312 1052.03 59.584 1053.18 61.696C1054.34 63.744 1055.9 65.408 1057.89 66.688C1059.87 67.968 1062.14 68.608 1064.7 68.608Z" fill="#20211F"/><path d="M1104.64 76V41.632H1095.62V33.76H1104.64V18.208C1104.64 14.944 1105.16 12.288 1106.18 10.24C1107.27 8.12799 1108.84 6.56 1110.88 5.536C1112.93 4.512 1115.4 3.99999 1118.28 3.99999H1122.79V11.872H1119.14C1117.41 11.872 1116.1 12.384 1115.2 13.408C1114.31 14.368 1113.86 15.904 1113.86 18.016V33.76H1124.04V41.632H1113.86V76H1104.64Z" fill="#20211F"/><path d="M1139.56 76V41.632H1129.29V33.76H1139.56V17.44H1148.77V33.76H1158.95V41.632H1148.77V76H1139.56Z" fill="#20211F"/><path d="M771.264 135.294C769.332 135.294 767.624 134.958 766.14 134.286C764.684 133.614 763.536 132.676 762.696 131.472C761.856 130.268 761.408 128.924 761.352 127.44H764.46C764.6 128.868 765.23 130.128 766.35 131.22C767.47 132.284 769.108 132.816 771.264 132.816C773.252 132.816 774.82 132.312 775.968 131.304C777.144 130.268 777.732 128.966 777.732 127.398C777.732 126.138 777.41 125.13 776.766 124.374C776.122 123.59 775.324 123.016 774.372 122.652C773.42 122.26 772.104 121.84 770.424 121.392C768.464 120.86 766.91 120.342 765.762 119.838C764.614 119.334 763.634 118.55 762.822 117.486C762.01 116.422 761.604 114.98 761.604 113.16C761.604 111.648 761.996 110.304 762.78 109.128C763.564 107.924 764.67 106.986 766.098 106.314C767.526 105.642 769.164 105.306 771.012 105.306C773.728 105.306 775.912 105.978 777.564 107.322C779.244 108.638 780.21 110.346 780.462 112.446H777.27C777.074 111.242 776.416 110.178 775.296 109.254C774.176 108.302 772.664 107.826 770.76 107.826C768.996 107.826 767.526 108.302 766.35 109.254C765.174 110.178 764.586 111.452 764.586 113.076C764.586 114.308 764.908 115.302 765.552 116.058C766.196 116.814 766.994 117.388 767.946 117.78C768.926 118.172 770.242 118.592 771.894 119.04C773.798 119.572 775.338 120.104 776.514 120.636C777.69 121.14 778.684 121.924 779.496 122.988C780.308 124.052 780.714 125.48 780.714 127.272C780.714 128.644 780.35 129.946 779.622 131.178C778.894 132.41 777.816 133.404 776.388 134.16C774.96 134.916 773.252 135.294 771.264 135.294Z" fill="#20211F"/><path d="M818.693 105.642V108.078H810.545V135H807.605V108.078H799.415V105.642H818.693Z" fill="#20211F"/><path d="M841.269 105.642V124.122C841.269 127.034 841.955 129.19 843.327 130.59C844.727 131.99 846.631 132.69 849.039 132.69C851.447 132.69 853.323 132.004 854.667 130.632C856.039 129.232 856.725 127.062 856.725 124.122V105.642H859.665V124.08C859.665 127.804 858.671 130.604 856.683 132.48C854.723 134.356 852.161 135.294 848.997 135.294C845.833 135.294 843.257 134.356 841.269 132.48C839.309 130.604 838.329 127.804 838.329 124.08V105.642H841.269Z" fill="#20211F"/><path d="M890.037 105.642C893.285 105.642 896.071 106.23 898.395 107.406C900.719 108.582 902.497 110.276 903.729 112.488C904.961 114.7 905.577 117.332 905.577 120.384C905.577 123.408 904.961 126.026 903.729 128.238C902.497 130.422 900.719 132.102 898.395 133.278C896.071 134.426 893.285 135 890.037 135H881.343V105.642H890.037ZM890.037 132.564C894.125 132.564 897.233 131.5 899.361 129.372C901.517 127.216 902.595 124.22 902.595 120.384C902.595 116.52 901.517 113.51 899.361 111.354C897.233 109.17 894.125 108.078 890.037 108.078H884.283V132.564H890.037Z" fill="#20211F"/><path d="M929.057 103.92V135H926.117V103.92H929.057Z" fill="#20211F"/><path d="M964.023 135.294C961.307 135.294 958.843 134.664 956.631 133.404C954.419 132.116 952.669 130.338 951.381 128.07C950.121 125.774 949.491 123.184 949.491 120.3C949.491 117.416 950.121 114.84 951.381 112.572C952.669 110.276 954.419 108.498 956.631 107.238C958.843 105.95 961.307 105.306 964.023 105.306C966.767 105.306 969.245 105.95 971.457 107.238C973.669 108.498 975.405 110.276 976.665 112.572C977.925 114.84 978.555 117.416 978.555 120.3C978.555 123.184 977.925 125.774 976.665 128.07C975.405 130.338 973.669 132.116 971.457 133.404C969.245 134.664 966.767 135.294 964.023 135.294ZM964.023 132.732C966.207 132.732 968.167 132.228 969.903 131.22C971.639 130.212 973.011 128.77 974.019 126.894C975.027 124.99 975.531 122.792 975.531 120.3C975.531 117.808 975.027 115.624 974.019 113.748C973.011 111.872 971.639 110.43 969.903 109.422C968.167 108.414 966.207 107.91 964.023 107.91C961.839 107.91 959.879 108.414 958.143 109.422C956.407 110.43 955.035 111.872 954.027 113.748C953.019 115.624 952.515 117.808 952.515 120.3C952.515 122.792 953.019 124.99 954.027 126.894C955.035 128.77 956.407 130.212 958.143 131.22C959.879 132.228 961.839 132.732 964.023 132.732Z" fill="#20211F"/><path d="M675.774 135H646.997V105.989H675.774V135ZM675.777 105.989H675.774V87.8288H675.777V105.989ZM701.097 3C708.131 3.00001 714.653 4.81192 720.664 8.43531C726.803 11.9294 731.728 16.8475 735.437 23.1887C739.146 29.5298 741 36.9065 741 45.3181C741 54.2473 739.146 61.8827 735.437 68.2237C731.728 74.5649 726.803 79.4184 720.664 82.7831C714.653 86.1475 708.131 87.8288 701.097 87.8288H675.777V76.978H646.997V3H701.097Z" fill="#502B33"/><path d="M646.924 77.0503V105.916H618V77.0503H646.924Z" fill="#502B33"/></g><g id="ic"><path d="M2235 3C2241.63 3 2247 8.37258 2247 15V131C2247 137.627 2241.63 143 2235 143H2119C2112.37 143 2107 137.627 2107 131V15C2107 8.37258 2112.37 3 2119 3H2235ZM2154.27 98.7803V119H2174.4V98.7803H2154.27ZM2174.4 86.123V98.7803H2174.4V86.123H2174.4ZM2134 78.6104V98.7295H2154.22V78.6104H2134ZM2154.27 27V78.5605H2174.4V86.123H2192.1C2197.02 86.123 2201.58 84.9512 2205.78 82.6064C2210.07 80.2614 2213.52 76.8786 2216.11 72.459C2218.7 68.0395 2220 62.7175 2220 56.4941C2220 50.6318 2218.7 45.4907 2216.11 41.0713C2213.52 36.6517 2210.07 33.2234 2205.78 30.7881C2201.58 28.2629 2197.02 27.0001 2192.1 27H2154.27Z" fill="#20211F"/></g></defs></svg>
+<header><div class="wrap">
+<a href="#top" aria-label="Pixelcraft Studio home"><svg class="logo" viewBox="617.0 2.0 543.0 134.3" role="img" aria-label="Pixelcraft Studio"><use href="#lg"/></svg></a>
+<nav><a href="#work">Work</a><a href="#services">Services</a><a class="cta-n" href="mailto:pixelcraft-studio@outlook.com">Contact</a></nav>
+</div></header>
+<main id="top">
+<div class="hero"><canvas id="cv"></canvas><div class="wrap">
+<div class="eyebrow">Web design &amp; UX · Toronto, Ontario</div>
+<h1>We craft the web, <em>pixel by pixel.</em></h1>
+<p class="sub">Pixelcraft Studio designs human-centred websites and user experiences for small businesses, nonprofits, and community organizations.</p>
+<div class="btns"><a class="btn" href="#contact">Start a project</a><a class="btn alt" href="#work">See our work</a></div>
+<div class="chips"><b>Designed on</b><span>Squarespace</span><span>Wix</span><span>Shopify</span><span>WordPress</span><span>and more</span></div>
+</div></div>
+
+<section id="work"><div class="wrap"><h2>Recent Work</h2><table><thead><tr><th>Project</th><th>When</th><th></th></tr></thead><tbody id="tl"></tbody></table></div></section>
+<section id="services"><div class="wrap"><h2>What we do</h2><p class="lead">Web design built around the people who use your site to drive your business</p><div class="cols" id="svc"></div></div></section>
+<section><div class="wrap"><h2>Featured work</h2><p class="lead">Research-led projects and designs</p><div id="rows"></div></div></section>
+<section id="contact" class="end"><div class="wrap"><h2>Interested in working together?</h2>
+<div class="btns"><a class="btn" href="mailto:pixelcraft-studio@outlook.com">Send us a Message</a><a class="btn alt" href="https://www.alexisw.me">View the portfolio</a></div></div></section>
+</main>
+<footer><div class="wrap"><svg viewBox="2106.0 2.0 142.0 142.0" aria-hidden="true"><use href="#ic"/></svg><span>© 2026 Pixelcraft Studio · Toronto, Ontario · Craft the web.</span></div></footer>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},P="https://www.alexisw.me/portfolio";
+var D=[
+{t:"Jane’s Walk",k:"UX case study",d:"A user-centred look at how people find and join community walks.",u:P+"/ux-ui/janes-walk",y:"2026"},
+{t:"Lixor Go",k:"UX case study",d:"Research-led design from early insight to tested solution.",u:P+"/ux-ui/lixor-go",y:"2026"},
+{t:"MealVue MVP",k:"UX research",d:"B2C and B2B surveys with qualitative and ANOVA analysis to shape an MVP.",u:P,y:"2026"},
+{t:"Innovative Landfill Solutions",k:"Design system",d:"Typography, spacing, colour, and UI components for a new app, delivered Figma-ready.",u:P,y:"2025"},
+{t:"TMU Faculty of Arts Social",k:"Content strategy",d:"Multimedia posts, content audits, and calendars with brand consistency.",u:P,y:"2024"}];
+var S=[
+{t:"Web design",d:"Custom, responsive websites on the platform that suits you, so you can keep updating them yourself.",l:["Squarespace, Wix, Shopify, WordPress and more","Online stores and booking pages","Launch support and handover"]},
+{t:"User research & strategy",d:"We learn how your visitors think and behave, then shape the structure and content around them.",l:["User research and surveys","Site maps and wireframes","Usability testing"]},
+{t:"Branding & Design",d:"Clean, consistent interfaces that feel like your brand from the first click.",l:["Design systems and style guides","On brand colour and layouts","Typography and font selection"]}];
+$("#rows").innerHTML=D.slice(0,4).map(function(p,i){return '<a class="row" href="'+p.u+'"><span class="n">0'+(i+1)+'</span><div><h3>'+p.t+'</h3><small>'+p.d+'</small></div><span class="t">'+p.k+' ↗</span></a>'}).join("");
+$("#svc").innerHTML=S.map(function(s){return '<div class="sv"><h3>'+s.t+'</h3><p>'+s.d+'</p><ul><li>'+s.l.join('</li><li>')+'</li></ul></div>'}).join("");
+$("#tl").innerHTML=[{t:"MaoHouse",k:"Live website",u:"https://maohouse.online",y:"2026"},{t:"LaGringa",k:"Live website",u:"https://shoplagringa.com",y:"2026"}].concat(D).map(function(p){return '<tr><td>'+p.t+'</td><td>'+p.y+'</td><td><a href="'+p.u+'">'+p.k+' ↗</a></td></tr>'}).join("");
+var c=$("#cv"),x=c.getContext("2d"),Z=30,cols=0,rws=0,A,K;
+function size(){var r=c.parentNode.getBoundingClientRect();c.width=r.width;c.height=r.height;cols=Math.ceil(c.width/Z);rws=Math.ceil(c.height/Z);A=new Float32Array(cols*rws);K=new Uint8Array(cols*rws)}
+function on(i,j,v){if(i>=0&&j>=0&&i<cols&&j<rws){A[j*cols+i]=1;K[j*cols+i]=v}}
+function hit(e){var r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e,i=Math.floor((p.clientX-r.left)/Z),j=Math.floor((p.clientY-r.top)/Z);
+[[0,0],[1,0],[-1,0],[0,1],[0,-1]].forEach(function(o){on(i+o[0],j+o[1],0)})}
+function draw(){requestAnimationFrame(draw);
+if(Math.random()<.2)on(Math.floor(Math.random()*cols),Math.floor(Math.random()*rws),Math.random()<.5?1:0);
+x.clearRect(0,0,c.width,c.height);
+for(var j=0;j<rws;j++)for(var i=0;i<cols;i++){var q=j*cols+i,a=A[q];
+x.globalAlpha=.2;x.fillStyle="#20211F";x.fillRect(i*Z+Z/2-1.5,j*Z+Z/2-1.5,3,3);
+if(a>.02){x.globalAlpha=a;x.fillStyle=K[q]?"#B5BF50":"#502B33";x.fillRect(i*Z+3,j*Z+3,Z-6,Z-6);A[q]=a*.94}}
+x.globalAlpha=1}
+size();window.addEventListener("resize",size);
+var hero=c.parentNode;hero.addEventListener("mousemove",hit);hero.addEventListener("touchmove",hit,{passive:true});hero.addEventListener("touchstart",hit,{passive:true});
+draw();
+})();
+</script>
+</body>
+</html>
